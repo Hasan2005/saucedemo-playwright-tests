@@ -20,9 +20,9 @@ export class CheckoutPage {
   }
 
   async fillCheckoutInformation() {
-    await this.firstNameInput.fill('Hadi');
-    await this.lastNameInput.fill('Ali');
-    await this.postalCodeInput.fill('00970');
+    await this.firstNameInput.fill('Hasan');
+    await this.lastNameInput.fill('Musleh');
+    await this.postalCodeInput.fill('333-09');
     await this.continueButton.click();
   }
 

@@ -4,16 +4,9 @@ import { InventoryPage } from '../pages/InventoryPage';
 import { CartPage } from '../pages/CartPage';
 
 test.describe('Remove from Cart Feature', () => {
-  test.beforeEach(async ({ page }) => {
-    const loginPage = new LoginPage(page);
-
-    await loginPage.goto();
-    await loginPage.login(
-      process.env.USER_NAME as string,
-      process.env.PASSWORD as string
-    );
-  });
-
+ test.beforeEach(async ({ page }) => {
+  await page.goto('/inventory.html');
+});
   test('add one item, remove it, and verify cart is empty', async ({ page }) => {
     const inventoryPage = new InventoryPage(page);
     const cartPage = new CartPage(page);

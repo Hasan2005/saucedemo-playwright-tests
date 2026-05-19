@@ -1,6 +1,8 @@
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../pages/LoginPage';
 
+test.use({ storageState: { cookies: [], origins: [] } });
+
 test.describe('Login Feature', () => {
   test.beforeEach(async ({ page }) => {
     const loginPage = new LoginPage(page);
